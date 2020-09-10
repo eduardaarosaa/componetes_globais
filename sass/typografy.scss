@@ -1,0 +1,43 @@
+$primary: Roboto;
+$secondary: Poppins;
+
+@function em($size, $context: 16) {
+    @return $size / $context + em;
+}
+
+@mixin font-size($size: 12, $line-height: 12) {
+    font-size: em($size) !important;
+    line-height: em($line-height, $size) !important;
+}
+
+@mixin type-1($weight: Regular, $size: 12, $line-height: 12) {
+    font-family: $primary;
+    @include font-size($size, $line-height);
+    @if weight == Light {
+        font-weight: 300;
+    } @else if $weight == Regular {
+        font-weight: 400;
+    } @else if $weight == Medium {
+        font-weight: 500;
+    } @else if $weight == Bold {
+        font-weight: 700;
+    } @else if $weight == Black {
+        font-weight: 800;
+    }
+}
+
+@mixin type-2($weight: Regular, $size: 12, $line-height: 12) {
+    font-family: $secondary;
+    @include font-size($size, $line-height);
+    @if weight == Light {
+        font-weight: 300;
+    } @else if $weight == Regular {
+        font-weight: 400;
+    } @else if $weight == Medium {
+        font-weight: 500;
+    } @else if $weight == Bold {
+        font-weight: 700;
+    } @else if $weight == Black {
+        font-weight: 800;
+    }
+}

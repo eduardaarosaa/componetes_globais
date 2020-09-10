@@ -1,0 +1,118 @@
+@import "./colors.scss";
+@import "./typografy.scss";
+
+.container{
+    margin: 50px;
+}
+.spacing-div{
+    margin-top: 20px;
+}
+label-float{
+    position: relative;
+    padding-top: 13px;
+  }
+  
+  .label-float input{
+    border: 0;
+    border-bottom: 2px solid $gray_light_2;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius: 0;
+    margin-top: 4px;
+  }
+  .input-error{
+    border: 0;
+    border-bottom: 2px solid $red_dark;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius: 0;
+    margin-top: 4px;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid $gray_light_2
+  }
+  
+  .label-float input::placeholder{
+    color:$gray_light_1;
+    @include type-1(Regular, 16);
+  }
+ 
+  .label-float label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: $gray_medium_1;
+  }
+  .main-label{
+    color: $gray_medium_1;
+    @include type-1(Regular, 20, 22);
+    margin-left:20px;
+}
+.label-float input[type="text"]{
+    padding-left: 20px!important;
+}
+ input[type="text"]{
+    padding-left: 20px!important;
+}
+.label-float input[type="password"]{
+    padding-left: 20px!important;
+}
+.container-label{
+    display: flex;
+}
+.atencion-input{
+    color: $red_dark;
+    @include type-1(Regular, 20, 22);
+    padding-right: 5px;
+}
+.text-helper{
+    @include type-1(Regular, 13, 15);
+    margin-left:20px;
+    color:$gray_medium_3;
+    margin-top: 4px;
+}
+.icon-custom{
+   position: absolute;
+   margin-left: -40px;
+   @include type-1(Regular, 20, 22);
+}
+ .icon-attention, .icon-custom{
+    margin:0px!important;
+    margin-left: -40px!important;
+}
+
+.icon-attention{
+    color: $red_dark!important;
+    position: absolute;
+    margin-left: -40px;
+    @include type-1(Regular, 20, 22);
+   }
+ 
+.text-error{
+    color:$red_dark;
+    @include type-1(Regular,13,15);
+    padding-left: 20px;
+    margin-top: 4px;
+}
